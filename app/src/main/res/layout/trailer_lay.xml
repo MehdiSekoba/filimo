@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <!--title-->
+    <TextView
+        android:id="@+id/txt_preview"
+        style="@style/title_Style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/preview"
+        android:textAppearance="@style/TextAppearance_light" app:layout_constraintStart_toStartOf="@id/bg_card"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_196mdp"
+        android:layout_margin="@dimen/_8mdp"
+        app:cardCornerRadius="@dimen/_22mdp"
+        android:id="@+id/bg_card"
+        app:layout_constraintTop_toBottomOf="@id/txt_preview"
+        app:strokeWidth="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!--player-->
+            <com.google.android.exoplayer2.ui.PlayerView
+                android:id="@+id/player"
+                android:layout_width="match_parent"
+                app:resize_mode="fill"
+                android:layout_height="match_parent"
+                app:animation_enabled="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:use_artwork="true"
+                app:use_controller="false" />
+            <!--thumbnail-->
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/img_thumbnail"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:scaleType="fitXY"
+                app:layout_constraintBottom_toBottomOf="@id/player"
+                app:layout_constraintEnd_toEndOf="@id/player"
+                app:layout_constraintStart_toStartOf="@id/player"
+                app:layout_constraintTop_toTopOf="@id/player"
+                app:shapeAppearance="@style/RoundImage"
+                tools:src="@tools:sample/backgrounds/scenic" />
+
+            <!--mute sound-->
+            <ImageView
+                android:id="@+id/volume_mute"
+                android:layout_width="@dimen/_26mdp"
+                android:layout_height="@dimen/_26mdp"
+                android:layout_marginStart="@dimen/_16mdp"
+                android:layout_marginTop="@dimen/_36mdp"
+                android:contentDescription="@string/app_name"
+                android:scaleType="fitXY"
+                android:src="@drawable/volume_mute"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/white" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

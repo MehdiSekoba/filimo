@@ -1,0 +1,39 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="20dp"
+    android:height="20dp"
+    android:viewportWidth="60"
+    android:viewportHeight="60">
+  <path
+      android:pathData="m40.95,58.68 l-4,-12A1,1 0,0 0,36 46L24,46c-0.43,0 -0.81,0.28 -0.95,0.68l-4,12A1.01,1.01 0,0 0,20 60h6c0.43,0 0.81,-0.28 0.95,-0.68L30,50.17l3.05,9.15A1,1 0,0 0,34 60h6c0.32,0 0.62,-0.15 0.81,-0.42s0.24,-0.6 0.14,-0.9"
+      android:fillColor="#023473"/>
+  <path
+      android:pathData="M41,42L19,42c-0.55,0 -1,0.45 -1,1v2c0,1.65 1.35,3 3,3h18c1.65,0 3,-1.35 3,-3v-2c0,-0.55 -0.45,-1 -1,-1"
+      android:fillColor="#124bf2"/>
+  <path
+      android:pathData="M6,28L10,28A1,1 0,0 1,11 29L11,35A1,1 0,0 1,10 36L6,36A1,1 0,0 1,5 35L5,29A1,1 0,0 1,6 28z"
+      android:fillColor="@color/Gold"/>
+  <path
+      android:pathData="M48,25L52,25A1,1 0,0 1,53 26L53,38A1,1 0,0 1,52 39L48,39A1,1 0,0 1,47 38L47,26A1,1 0,0 1,48 25z"
+      android:fillColor="@color/Gold"/>
+  <path
+      android:pathData="M1.37,25.07a1.02,1.02 0,0 0,-0.93 0.1c-0.27,0.19 -0.44,0.5 -0.44,0.83v12a1,1 0,0 0,1.37 0.93L6,36v-8zM59.46,20.11c-0.33,-0.17 -0.73,-0.14 -1.04,0.08L52,25v14l6.42,4.81c0.17,0.12 0.38,0.19 0.58,0.19 0.16,0 0.31,-0.04 0.46,-0.11 0.33,-0.17 0.54,-0.51 0.54,-0.89L60,21c0,-0.38 -0.21,-0.72 -0.54,-0.89"
+      android:fillColor="@color/Gold"/>
+  <path
+      android:pathData="M20,13m-9,0a9,9 0,1 1,18 0a9,9 0,1 1,-18 0"
+      android:fillColor="#124bf2"/>
+  <path
+      android:pathData="M20,13m-3,0a3,3 0,1 1,6 0a3,3 0,1 1,-6 0"
+      android:fillColor="#fff"/>
+  <path
+      android:pathData="M38,11m-11,0a11,11 0,1 1,22 0a11,11 0,1 1,-22 0"
+      android:fillColor="#056bf1"/>
+  <path
+      android:pathData="M38,11m-4,0a4,4 0,1 1,8 0a4,4 0,1 1,-8 0"
+      android:fillColor="#fff"/>
+  <path
+      android:pathData="M12,20L46,20A3,3 0,0 1,49 23L49,41A3,3 0,0 1,46 44L12,44A3,3 0,0 1,9 41L9,23A3,3 0,0 1,12 20z"
+      android:fillColor="#4bf2e1"/>
+  <path
+      android:pathData="M14,34L24,34A1,1 0,0 1,25 35L25,39A1,1 0,0 1,24 40L14,40A1,1 0,0 1,13 39L13,35A1,1 0,0 1,14 34z"
+      android:fillColor="#fff"/>
+</vector>

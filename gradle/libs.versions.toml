@@ -1,0 +1,81 @@
+[versions]
+agp = "8.5.2"
+androidveil = "1.1.4"
+datastorePreferences = "1.1.1"
+decorator = "2.1.0"
+exoplayer = "2.17.1"
+glide = "4.16.0"
+kohiiCore = "1.4.0.2017001"
+kotlin = "2.0.20"
+coreKtx = "1.13.1"
+junit = "4.13.2"
+junitVersion = "1.2.1"
+espressoCore = "3.6.1"
+appcompat = "1.7.0"
+lottie = "6.5.2"
+material = "1.12.0"
+activity = "1.9.2"
+constraintlayout = "2.1.4"
+kspversion = "2.0.20-1.0.25"
+hiltversion = "2.51.1"
+permissionx = "1.8.1"
+safeargs = "2.8.1"
+retrofit = "2.11.0"
+okhttp = "4.12.0"
+lifecycle = "2.8.6"
+coroutines = "1.8.1"
+google_gson = "2.10.1"
+swiperefreshlayout = "1.1.0"
+calligraphy = "3.1.1"
+timber = "5.0.1"
+viewpump = "2.0.3"
+dynamicsizes = "1.0"
+services_google = "4.4.2"
+firbase_message = "24.0.1"
+[libraries]
+androidveil = { module = "com.github.skydoves:androidveil", version.ref = "androidveil" }
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-datastore-preferences = { module = "androidx.datastore:datastore-preferences", version.ref = "datastorePreferences" }
+decorator = { module = "com.rubensousa:decorator", version.ref = "decorator" }
+exoplayer = { module = "com.google.android.exoplayer:exoplayer", version.ref = "exoplayer" }
+firebase-messaging = { module = "com.google.firebase:firebase-messaging", version.ref = "firbase_message" }
+glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+kohii-core = { module = "im.ene.kohii:kohii-core", version.ref = "kohiiCore" }
+kohii-exoplayer = { module = "im.ene.kohii:kohii-exoplayer", version.ref = "kohiiCore" }
+lottie = { module = "com.airbnb.android:lottie", version.ref = "lottie" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+hilt = { group = "com.google.dagger", name = "hilt-android", version.ref = "hiltversion" }
+hiltcompiler = { group = "com.google.dagger", name = "hilt-compiler", version.ref = "hiltversion" }
+navigation_fragment = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "safeargs" }
+navigation_ui = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "safeargs" }
+permissionx = { module = "com.guolindev.permissionx:permissionx", version.ref = "permissionx" }
+retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
+converter_gson = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofit" }
+okhttp = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okhttp" }
+interceptor = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "okhttp" }
+lifecycle_viewmodel = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "lifecycle" }
+lifecycle_runtime = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycle" }
+lifecycle_livedata = { group = "androidx.lifecycle", name = "lifecycle-livedata-ktx", version.ref = "lifecycle" }
+coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutines" }
+coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "coroutines" }
+google_gson = { group = "com.google.code.gson", name = "gson", version.ref = "google_gson" }
+calligraphy = { group = "io.github.inflationx", name = "calligraphy3", version.ref = "calligraphy" }
+timber = { module = "com.jakewharton.timber:timber", version.ref = "timber" }
+viewpump = { group = "io.github.inflationx", name = "viewpump", version.ref = "viewpump" }
+dynamicsizes = { group = "com.github.MrNouri", name = "DynamicSizes", version.ref = "dynamicsizes" }
+androidx-swiperefreshlayout = { group = "androidx.swiperefreshlayout", name = "swiperefreshlayout", version.ref = "swiperefreshlayout" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+ksp_plugin = { id = "com.google.devtools.ksp", version.ref = "kspversion" }
+hilt_plugin = { id = "com.google.dagger.hilt.android", version.ref = "hiltversion" }
+safeargs_plugin = { id = "androidx.navigation.safeargs", version.ref = "safeargs" }
+google_services = { id = "com.google.gms.google-services", version.ref = "services_google" }
+kotlin-parcelize = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "kotlin" }

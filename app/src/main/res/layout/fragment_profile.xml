@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.profile.ProfileFragment">
+    <!--scroll-->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_26mdp">
+            <!--image-->
+            <ImageView
+                android:id="@+id/img_tv_see"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_190mdp"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/popcorns_cuate"
+                app:layout_constraintTop_toTopOf="parent" />
+            <!--logo-->
+            <ImageView
+                android:id="@+id/img_logo"
+                android:layout_width="@dimen/_30mdp"
+                android:layout_height="@dimen/_30mdp"
+                android:layout_marginTop="@dimen/_38mdp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/logo_text"
+                app:layout_constraintBottom_toBottomOf="@id/img_tv_see"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/img_tv_see"
+                app:tint="@color/Gold" />
+            <!--sing-->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_login"
+                style="@style/GoldMaterialButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10mdp"
+                android:text="@string/login"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/img_tv_see" />
+            <!--other-->
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guid_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.08" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guid_end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.88" />
+            <!-- them-->
+            <View
+                android:id="@+id/v_top"
+                style="@style/Divider.Horizontal"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/_16mdp"
+                app:layout_constraintEnd_toEndOf="@id/guid_end"
+                app:layout_constraintStart_toStartOf="@id/guid_start"
+                app:layout_constraintTop_toBottomOf="@id/btn_login" />
+
+            <!--mon-->
+            <ImageView
+                android:id="@+id/img_mon"
+                style="@style/logoTintStyle"
+                android:layout_width="@dimen/_26mdp"
+                android:layout_height="@dimen/_26mdp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_mon"
+                app:layout_constraintBottom_toBottomOf="@id/v_them"
+                app:layout_constraintStart_toStartOf="@id/guid_start"
+                app:layout_constraintTop_toBottomOf="@id/v_top" />
+
+            <TextView
+                android:id="@+id/txt_them"
+                style="@style/title_Style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10mdp"
+                android:text="@string/txt_them"
+                android:textAppearance="@style/TextAppearance_Bold"
+                app:layout_constraintBottom_toBottomOf="@id/img_mon"
+                app:layout_constraintStart_toEndOf="@id/img_mon"
+                app:layout_constraintTop_toTopOf="@id/img_mon" />
+            <!--switch-->
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/switchTheme"
+                app:layout_constraintTop_toTopOf="@id/txt_them"
+                app:layout_constraintEnd_toEndOf="@id/guid_end"
+                app:layout_constraintBottom_toBottomOf="@id/txt_them"
+               app:thumbIcon="@drawable/thumb_icons"
+                app:thumbTint="@color/item_thumb_tint"
+                app:trackTint="@color/item_tint"
+               app:iconTint="@color/item_icon_tint"
+           />
+
+            <View
+                android:id="@+id/v_them"
+                style="@style/Divider.Horizontal"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/_8mdp"
+                app:layout_constraintEnd_toEndOf="@id/guid_end"
+                app:layout_constraintStart_toStartOf="@id/guid_start"
+                app:layout_constraintTop_toBottomOf="@id/switchTheme" />
+
+            <!--info-->
+            <ImageView
+                android:id="@+id/img_info"
+                style="@style/logoTintStyle"
+                android:layout_width="@dimen/_26mdp"
+                android:layout_height="@dimen/_26mdp"
+                android:layout_marginTop="@dimen/_10mdp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_about"
+                app:layout_constraintStart_toStartOf="@id/guid_start"
+                app:layout_constraintTop_toBottomOf="@id/v_them" />
+
+            <TextView
+                android:id="@+id/txt_info"
+                style="@style/title_Style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10mdp"
+                android:text="@string/info"
+                android:textAppearance="@style/TextAppearance_Bold"
+                app:layout_constraintStart_toEndOf="@id/img_info"
+                app:layout_constraintTop_toTopOf="@id/img_info" />
+
+            <View
+                android:id="@+id/v_info"
+                style="@style/Divider.Horizontal"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/_8mdp"
+                app:layout_constraintEnd_toEndOf="@id/guid_end"
+                app:layout_constraintStart_toStartOf="@id/guid_start"
+                app:layout_constraintTop_toBottomOf="@id/img_info" />
+            <!--contact-->
+            <ImageView
+                android:id="@+id/img_contact"
+                style="@style/logoTintStyle"
+                android:layout_width="@dimen/_26mdp"
+                android:layout_height="@dimen/_26mdp"
+                android:layout_marginTop="@dimen/_10mdp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_call"
+                app:layout_constraintStart_toStartOf="@id/guid_start"
+                app:layout_constraintTop_toBottomOf="@id/v_info" />
+
+            <TextView
+                android:id="@+id/txt_contact"
+                style="@style/title_Style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10mdp"
+                android:text="@string/contact_me"
+                android:textAppearance="@style/TextAppearance_Bold"
+                app:layout_constraintBottom_toBottomOf="@id/img_contact"
+                app:layout_constraintStart_toEndOf="@id/img_contact"
+                app:layout_constraintTop_toTopOf="@id/img_contact" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

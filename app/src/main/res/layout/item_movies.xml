@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/_192mdp"
+    android:layout_height="@dimen/_200mdp"
+    android:layout_margin="@dimen/_8mdp"
+    android:elevation="@dimen/_10mdp">
+    <!--poster-->
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/img_poster"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_196mdp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearance="@style/RoundImageView"
+        tools:src="@tools:sample/backgrounds/scenic" />
+    <!--info-->
+    <ImageView
+        android:id="@+id/info_img"
+        android:layout_width="@dimen/_20mdp"
+        android:layout_height="@dimen/_20mdp"
+        android:layout_marginTop="@dimen/_16mdp"
+        android:background="@drawable/bg_square"
+        android:contentDescription="@string/app_name"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="@id/guid_start"
+        app:layout_constraintTop_toTopOf="parent" />
+    <!--shadow-->
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_shadow"
+        app:layout_constraintBottom_toBottomOf="@id/img_poster"
+        app:layout_constraintEnd_toEndOf="@id/img_poster"
+        app:layout_constraintStart_toStartOf="@id/img_poster"
+        app:layout_constraintTop_toTopOf="@id/img_poster" />
+    <!--guideline-->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guid_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.10" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guid_center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.62" />
+    <!--logo-->
+    <!--name-->
+    <TextView
+        android:id="@+id/txt_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_4mdp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textAppearance="@style/TextAppearance_light"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@id/v_shadow"
+        app:layout_constraintStart_toStartOf="@id/guid_start"
+        app:layout_constraintTop_toBottomOf="@id/guid_center"
+        tools:text="@string/txt_tools" />
+    <!--genre-->
+    <TextView
+        android:id="@+id/txt_genre"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_4mdp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textAppearance="@style/TextAppearance_light"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@id/v_shadow"
+        app:layout_constraintStart_toStartOf="@id/guid_start"
+        app:layout_constraintTop_toBottomOf="@id/txt_name"
+        tools:text="@string/txt_tools" />
+    <!--manufacture-->
+    <View
+        android:id="@+id/v_shadow"
+        android:layout_width="@dimen/_52mdp"
+        android:layout_height="@dimen/_48mdp"
+        android:alpha="0.2"
+        android:background="@drawable/bg_rating"
+        android:backgroundTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/img_poster"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_manufacture"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:padding="@dimen/_3mdp"
+        android:textAppearance="@style/TextAppearance_Farsi_Digits"
+        android:textColor="@color/white"
+        app:drawableEndCompat="@drawable/manufacture_video"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/v_shadow"
+        app:layout_constraintStart_toStartOf="@id/v_shadow"
+        app:layout_constraintTop_toTopOf="@id/v_shadow"
+        tools:text="2.0" />
+</androidx.constraintlayout.widget.ConstraintLayout>

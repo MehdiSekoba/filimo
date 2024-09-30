@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.material.imageview.ShapeableImageView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_image"
+    android:layout_width="@dimen/_80mdp"
+    android:layout_height="@dimen/_80mdp"
+    android:layout_margin="@dimen/_8mdp"
+    android:scaleType="fitXY"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:shapeAppearance="@style/RoundImageView"
+    tools:src="@tools:sample/backgrounds/scenic" />

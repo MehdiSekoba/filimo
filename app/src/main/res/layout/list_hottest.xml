@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_220mdp"
+        android:layout_marginTop="@dimen/_6mdp"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/_6mdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shimmer_auto_start="true"
+        app:shimmer_direction="right_to_left">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <include layout="@layout/movies_placeholder_layout" />
+
+            <include layout="@layout/movies_placeholder_layout" />
+
+            <include layout="@layout/movies_placeholder_layout" />
+
+
+        </LinearLayout>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+    <!--Title-->
+    <!--Title-->
+    <TextView
+        android:id="@+id/hottest_title"
+        style="@style/title_Style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_15mdp"
+        android:gravity="center_vertical"
+        android:text="@string/hottest"
+        android:textAppearance="@style/TextAppearance_Bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <!--show all-->
+    <TextView
+        android:id="@+id/show_hottest_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_15mdp"
+        android:drawablePadding="@dimen/_4mdp"
+        android:gravity="center_vertical"
+        android:text="@string/show_all"
+        android:textAppearance="@style/TextAppearance_mobile_bold"
+        android:textColor="@color/Gold"
+        app:drawableEndCompat="@drawable/arrow_left"
+        app:drawableTint="@color/Gold"
+        app:layout_constraintBottom_toBottomOf="@id/hottest_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/hottest_title" />
+
+    <!--list-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/hottest_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8mdp"
+        android:clipToPadding="false"
+        app:layout_constraintTop_toBottomOf="@id/hottest_title" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "230977890941",
+    "project_id": "filimo-6abdc",
+    "storage_bucket": "filimo-6abdc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:230977890941:android:ce576d8b2f21188c1d9f14",
+        "android_client_info": {
+          "package_name": "com.mehdisekoba.filimo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_OJ7uW8mFB3yuOl357A1ghSr0wvF4ZXA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

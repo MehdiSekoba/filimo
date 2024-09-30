@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.splash.SplashFragment">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_26mdp">
+
+        <!-- ShimmerFrameLayout for loading placeholder -->
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmer_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:shimmer_auto_start="true"
+            app:shimmer_direction="right_to_left">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <include layout="@layout/splash_placeholder_layout" />
+            </LinearLayout>
+        </com.facebook.shimmer.ShimmerFrameLayout>
+    </RelativeLayout>
+    <!--online lay-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/online_lay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.mehdisekoba.filimo.utils.view.InfiniteAutoScrollRecyclerView
+            android:id="@+id/rc_online"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_36mdp"
+            app:layout_constraintBottom_toTopOf="@id/guid_center"
+            app:layout_constraintTop_toTopOf="parent"
+            app:scrollLayoutType="grid" />
+        <!--guideline-->
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guid_center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.70" />
+        <!--logo-->
+        <ImageView
+            android:id="@+id/online_img_logo"
+            android:layout_width="@dimen/_60mdp"
+            android:layout_height="@dimen/_60mdp"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon_filimo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rc_online" />
+        <!--app name-->
+        <ImageView
+            android:id="@+id/online_txt_logo"
+            style="@style/logoTintStyle"
+            android:layout_width="@dimen/_60mdp"
+            android:layout_height="@dimen/_20mdp"
+            android:layout_marginTop="@dimen/_32mdp"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitXY"
+            android:src="@drawable/logo_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/online_img_logo" />
+        <!--version-->
+        <TextView
+            android:id="@+id/online_txt_version"
+            style="@style/title_Style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_16mdp"
+            android:textAppearance="@style/TextAppearance_light"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/online_txt_logo"
+            tools:text="1.0.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--offline lay-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/offline_lay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+        <!--logo-->
+        <ImageView
+            android:id="@+id/img_logo"
+            android:layout_width="@dimen/_100mdp"
+            android:layout_height="@dimen/_100mdp"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon_filimo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <!--app name-->
+        <ImageView
+            android:id="@+id/txt_logo"
+            style="@style/logoTintStyle"
+            android:layout_width="@dimen/_60mdp"
+            android:layout_height="@dimen/_20mdp"
+            android:layout_marginTop="@dimen/_32mdp"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitXY"
+            android:src="@drawable/logo_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/img_logo" />
+        <!--version-->
+        <TextView
+            android:id="@+id/txt_version"
+            style="@style/title_Style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_16mdp"
+            android:textAppearance="@style/TextAppearance_light"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt_logo"
+            tools:text="1.0.0" />
+        <!--company-->
+        <ImageView
+            android:id="@+id/company_logo"
+            style="@style/logoTintStyle"
+            android:layout_width="@dimen/_60mdp"
+            android:layout_height="@dimen/_10mdp"
+            android:layout_marginBottom="@dimen/_100mdp"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitXY"
+            android:src="@drawable/company"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+        <!--loading-->
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/progress_circular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_16mdp"
+            android:indeterminate="true"
+            app:indicatorColor="@color/Gold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/company_logo"
+            app:showAnimationBehavior="inward"
+            app:showDelay="500" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

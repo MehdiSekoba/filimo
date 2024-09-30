@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/_10mdp"
+    app:cardCornerRadius="@dimen/_22mdp"
+    app:strokeWidth="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--player-->
+        <com.google.android.exoplayer2.ui.PlayerView
+            android:id="@+id/playerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            app:animation_enabled="false"
+            app:use_artwork="true"
+            app:use_controller="false" />
+        <!--thumbnail-->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/img_thumbnail"
+            app:layout_constraintStart_toStartOf="@id/playerView"
+            app:layout_constraintEnd_toEndOf="@id/playerView"
+            app:layout_constraintTop_toTopOf="@id/playerView"
+            app:layout_constraintBottom_toBottomOf="@id/playerView"
+            android:scaleType="fitXY"
+            app:shapeAppearance="@style/RoundImage"
+            tools:src="@tools:sample/backgrounds/scenic"/>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_6mdp"
+            android:layout_marginBottom="@dimen/_16mdp"
+            android:background="@drawable/bg_square"
+            android:backgroundTint="@color/semi_transparent_white"
+            android:paddingBottom="@dimen/_4mdp"
+            app:layout_constraintBottom_toBottomOf="@id/playerView"
+            app:layout_constraintEnd_toEndOf="@id/playerView"
+            app:layout_constraintStart_toStartOf="@id/playerView">
+
+            <!--logo-->
+            <ImageView
+                android:id="@+id/img_logo"
+                android:layout_width="@dimen/_60mdp"
+                android:layout_height="@dimen/_60mdp"
+                android:layout_marginStart="@dimen/_14mdp"
+                android:contentDescription="@string/app_name"
+                android:scaleType="fitXY"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@tools:sample/backgrounds/scenic" />
+            <!--title-->
+            <TextView
+                android:id="@+id/txt_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_12mdp"
+                android:layout_marginTop="@dimen/mines10mdp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textAppearance="@style/TextAppearance_Bold"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/img_logo"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="@string/app_name" />
+            <!--info-->
+            <TextView
+                android:id="@+id/txt_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_12mdp"
+                android:layout_marginTop="@dimen/_4mdp"
+                android:background="@drawable/bg_circle"
+                android:backgroundTint="@color/Dark_Charcoal"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:padding="@dimen/_6mdp"
+                android:textAppearance="@style/TextAppearance_mobile_bold"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toEndOf="@id/img_logo"
+                app:layout_constraintTop_toBottomOf="@id/txt_title"
+                tools:text="@string/app_name" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--mute sound-->
+        <ImageView
+            android:id="@+id/volume_mute"
+            android:layout_width="@dimen/_26mdp"
+            android:layout_height="@dimen/_26mdp"
+            android:layout_marginStart="@dimen/_16mdp"
+            android:layout_marginTop="@dimen/_36mdp"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitXY"
+            android:src="@drawable/volume_mute"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/white" />
+        <!--close-->
+        <ImageView
+            android:id="@+id/img_close"
+            android:layout_width="@dimen/_26mdp"
+            android:layout_height="@dimen/_26mdp"
+            android:layout_marginEnd="@dimen/_16mdp"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitXY"
+            android:src="@drawable/close_circle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/volume_mute"
+            app:tint="@color/white" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

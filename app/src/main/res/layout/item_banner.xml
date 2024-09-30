@@ -1,0 +1,68 @@
+<com.google.android.material.carousel.MaskableFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/carousel_item_container"
+    android:layout_width="@dimen/_100mdp"
+    android:layout_height="match_parent"
+    android:layout_marginStart="4dp"
+    android:layout_marginEnd="4dp"
+    android:foreground="?attr/selectableItemBackground"
+    app:shapeAppearance="?attr/shapeAppearanceCornerExtraLarge">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/carousel_image_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitXY" />
+        <!--shadow-->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_shadow_dark"/>
+        <!--logo-->
+        <ImageView
+            android:id="@+id/img_logo"
+            android:layout_width="@dimen/_60mdp"
+            android:layout_height="@dimen/_60mdp"
+            android:layout_marginHorizontal="@dimen/_16mdp"
+            android:contentDescription="@string/app_name"
+
+            app:layout_constraintBottom_toTopOf="@id/txt_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+        <!--title-->
+        <TextView
+            android:id="@+id/txt_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_16mdp"
+            android:layout_marginBottom="@dimen/_44mdp"
+            android:gravity="start|center_vertical|center_horizontal"
+            android:maxLines="2"
+            android:textAppearance="@style/TextAppearance_mobile_bold"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+        <TextView
+            android:id="@+id/link_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_4mdp"
+            android:layout_marginBottom="@dimen/_22mdp"
+            android:maxLines="2"
+            android:textAppearance="@style/TextAppearance_light"
+            android:textColor="@color/Eerie_Black"
+            app:layout_constraintStart_toStartOf="@id/txt_title"
+            app:layout_constraintTop_toBottomOf="@id/txt_title"
+            android:background="@drawable/bg_square"
+            android:backgroundTint="@color/white"
+            android:padding="@dimen/_5mdp"
+            android:layout_marginTop="@dimen/_2mdp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.carousel.MaskableFrameLayout>

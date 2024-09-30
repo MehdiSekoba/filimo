@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="@dimen/_5mdp"
+    android:padding="0dp"
+   >
+
+    <TextView
+        android:id="@+id/itemTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10mdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textAppearance="@style/TextAppearance_Bold"
+        app:layout_constraintEnd_toStartOf="@id/show_title"
+        style="@style/title_Style"
+        tools:text="@string/txt_actor"/>
+    <!--show all-->
+    <TextView
+        android:id="@+id/show_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_15mdp"
+        android:drawablePadding="@dimen/_4mdp"
+        android:gravity="center_vertical"
+        android:text="@string/show_all"
+        android:textAppearance="@style/TextAppearance_mobile_bold"
+        android:textColor="@color/Gold"
+        app:drawableEndCompat="@drawable/arrow_left"
+        app:drawableTint="@color/Gold"
+        app:layout_constraintBottom_toBottomOf="@id/itemTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/itemTitle" />
+    <!--List-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/itemSubCatsList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/_5mdp"
+        android:clipToPadding="false"
+        android:paddingHorizontal="@dimen/_10mdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/itemTitle"
+       />
+</androidx.constraintlayout.widget.ConstraintLayout>

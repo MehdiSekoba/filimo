@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">filimo</string>
+    <string name="home">خانه</string>
+    <string name="category">دسته بندی</string>
+    <string name="profile">پروفایل</string>
+    <string name="trailers">داغ</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="app_version">نسخه </string>
+    <string name="deniedPermission">برای اجرای درست اپلیکیشن نیاز به دسترسی دارم</string>
+    <string name="Retry">تلاش مجدد</string>
+    <string name="txt_action">اتصال اینترنتی خود را بررسی کنید!</string>
+    <string name="part">قسمت</string>
+    <string name="tryAgain">تلاش مجدد</string>
+    <string name="special">ویژه</string>
+    <string name="show_all">مشاهده همه</string>
+    <string name="login">ورود و ثبت نام</string>
+    <string name="tools_name">تم</string>
+    <string name="txt_them">تم</string>
+    <string name="info">درباره</string>
+    <string name="contact_me">تماس با ما</string>
+    <string name="txt_tools">کارمانی - فصل ۱ قسمت ۱۴</string>
+    <string name="hottest">داغ‌ترین‌ها</string>
+    <string name="new_movie">تازه ها</string>
+    <string name="exclusive">سریال های اختصاصی فیلیمو</string>
+    <string name="online_screening">اکران آنلاین</string>
+    <string name="iranian_series">سریال ایرانی\n</string>
+    <string name="story_movies">داستان فیلم :</string>
+    <string name="txt_similar">پیشنهاد های مشابه :</string>
+    <string name="preview">پیش نمایش :</string>
+    <string name="txt_actor">بازیگران :</string>
+    <string name="factors_of_production">عوامل تولید :</string>
+    <string name="range_see">بالای</string>
+    <string name="txt_year">سال</string>
+    <string name="txt_product">محصول</string>
+    <string name="quality_video"> کیفیت HD</string>
+    <string name="txt_romantic">ویژه عاشقانه</string>
+    <string name="txt_disconnect">اتصال به اینترنت برقرار نیست !</string>
+    <string name="retry">تلاش مجدد</string>
+
+</resources>

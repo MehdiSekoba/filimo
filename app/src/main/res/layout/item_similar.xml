@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/_164mdp"
+    android:layout_height="@dimen/_182mdp"
+    android:layout_margin="@dimen/_6mdp">
+    <!--poster-->
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/img_movies"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_156mdp"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearance="@style/RoundImageView"
+        tools:src="@tools:sample/backgrounds/scenic" />
+    <!--title-->
+    <TextView
+        android:id="@+id/txt_name"
+        style="@style/title_Style"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_4mdp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textAppearance="@style/TextAppearance_light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_movies"
+        tools:text="@string/trailers" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_menu"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.mehdisekoba.filimo.ui.splash.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" />
+    <action
+        android:id="@+id/action_splash_to_home"
+        app:destination="@id/nav_main" />
+    <navigation
+        android:id="@+id/nav_main"
+        app:startDestination="@id/homeFragment">
+        <fragment
+            android:id="@+id/homeFragment"
+            android:name="com.mehdisekoba.filimo.ui.home.HomeFragment"
+            android:label="fragment_home"
+            tools:layout="@layout/fragment_home" />
+        <fragment
+            android:id="@+id/categoryFragment"
+            android:name="com.mehdisekoba.filimo.ui.category.CategoryFragment"
+            android:label="fragment_category"
+            tools:layout="@layout/fragment_category">
+            <argument
+                android:name="data"
+                android:defaultValue="@null"
+                app:argType="com.mehdisekoba.filimo.data.model.category.ResponseCategory$Data$Attributes"
+                app:nullable="true" />
+        </fragment>
+
+        <fragment
+            android:id="@+id/exploreFragment"
+            android:name="com.mehdisekoba.filimo.ui.explore.ExploreFragment"
+            android:label="fragment_download"
+            tools:layout="@layout/fragment_explore" />
+        <fragment
+            android:id="@+id/profileFragment"
+            android:name="com.mehdisekoba.filimo.ui.profile.ProfileFragment"
+            android:label="fragment_profile"
+            tools:layout="@layout/fragment_profile" />
+    </navigation>
+    <!--details-->
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.mehdisekoba.filimo.ui.detail.DetailsFragment"
+        android:label="fragment_details"
+        tools:layout="@layout/fragment_details">
+        <argument
+            android:name="id"
+            app:argType="integer" />
+        <argument
+            android:name="data"
+            android:defaultValue="@null"
+            app:argType="com.mehdisekoba.filimo.data.model.home.ResponseHome$Included$Attributes"
+            app:nullable="true" />
+
+    </fragment>
+    <action
+        android:id="@+id/actionToDetailCategories"
+        app:destination="@id/detailsCategoryFragment"
+        app:enterAnim="@anim/nav_default_enter_anim"
+        app:exitAnim="@anim/nav_default_exit_anim"
+        app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+        app:popExitAnim="@anim/nav_default_pop_exit_anim">
+        <argument
+            android:name="tagId"
+            app:argType="string" />
+    </action>
+    <!--Detail-->
+    <action
+        android:id="@+id/actionToDetail"
+        app:destination="@id/detailsFragment"
+        app:enterAnim="@anim/nav_default_enter_anim"
+        app:exitAnim="@anim/nav_default_exit_anim"
+        app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+        app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    <fragment
+        android:id="@+id/detailsCategoryFragment"
+        android:name="com.mehdisekoba.filimo.ui.category.details.DetailsCategoryFragment"
+        android:label="fragment_details_category"
+        tools:layout="@layout/fragment_details_category">
+        <argument
+            android:name="tagId"
+            app:argType="string" />
+
+    </fragment>
+
+</navigation>

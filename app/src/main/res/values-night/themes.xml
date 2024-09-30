@@ -1,0 +1,145 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Filimo" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorOnPrimary">@color/Eerie_Black</item>
+        <item name="colorPrimaryContainer">@color/white</item>
+        <item name="colorOnPrimaryContainer">@color/white</item>
+        <item name="colorOnSecondary">@color/Eerie_Black</item>
+        <item name="colorOnBackground">@color/Eerie_Black</item>
+        <item name="android:windowBackground">@color/Eerie_Black</item>
+        <item name="colorSurfaceContainer">@color/white</item>
+        <item name="colorSurface">@color/white</item>
+        <item name="colorOnSurfaceVariant">@color/white</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="O_MR1">true</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:enforceStatusBarContrast" tools:targetApi="Q">true</item>
+        <item name="android:enforceNavigationBarContrast" tools:targetApi="Q">true</item>
+        <item name="bottomNavigationStyle">@style/Widget.App.BottomNavigationView</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+    </style>
+    <!--TextSize||fontBold-->
+    <style name="TextAppearance_Bold">
+        <item name="android:textSize">@dimen/_14font_mdp</item>
+        <item name="fontPath">fonts/is_bold.ttf</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance_light">
+        <item name="android:textSize">@dimen/_12font_mdp</item>
+        <item name="fontPath">fonts/is_light.ttf</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+    <style name="TextAppearance_light_small">
+        <item name="android:textSize">@dimen/_10font_mdp</item>
+        <item name="fontPath">fonts/is_light.ttf</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <!--TextSize||fontBold Mobile-->
+    <style name="TextAppearance_mobile_bold">
+        <item name="android:textSize">@dimen/_10font_mdp</item>
+        <item name="fontPath">fonts/is_mobile_bold.ttf</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+    <!--TextSize||Farsi-Digits-->
+    <style name="TextAppearance_Farsi_Digits">
+        <item name="android:textSize">@dimen/_10font_mdp</item>
+        <item name="fontPath">fonts/tanha_fd.ttf</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <!--bottom nav_main-->
+    <style name="Widget.App.BottomNavigationView" parent="Widget.Material3.BottomNavigationView">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.BottomNavigationView.Dark</item>
+    </style>
+
+    <style name="ThemeOverlay.App.BottomNavigationView.Dark" parent="">
+        <item name="colorOnSurfaceVariant">@color/Eerie_Black</item>
+        <item name="itemRippleColor">@color/Eerie_Black</item>
+        <item name="colorSurface">@color/Eerie_Black</item>
+        <item name="colorSurfaceContainer">@color/Eerie_Black</item>
+    </style>
+
+    <!--Round ImageView-->
+    <style name="ImageViewRound">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="RoundImageView">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">8%</item>
+    </style>
+
+    <style name="RoundImage">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">12%</item>
+    </style>
+
+
+    <!--text style-->
+    <style name="title_Style">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="title_Style_setting">
+        <item name="android:textColor">@color/Cultured</item>
+    </style>
+
+    <style name="sub_title_Style">
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <!--category-->
+    <style name="category_color_text">
+        <item name="android:textColor">@color/Cultured</item>
+    </style>
+    <!--icon tint logo-->
+    <style name="logoTintStyle">
+        <item name="tint">@color/white</item>
+    </style>
+    <!--style toolbar-->
+    <style name="toolbarStyle">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="LightProgress">
+        <item name="colorAccent">@color/Gold</item>
+    </style>
+    <!-- material button-->
+
+    <style name="GoldMaterialButton" parent="ThemeOverlay.Material3.Button">
+        <item name="backgroundTint">@color/Gold</item>
+        <item name="cornerRadius">@dimen/_15mdp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="iconStartPadding">@dimen/_6mdp</item>
+        <item name="android:inset">0dp</item>
+        <item name="android:textAppearance">@style/TextAppearance_Bold</item>
+    </style>
+    <!--divider-->
+    <style name="Divider">
+        <item name="android:background">@color/Cultured</item>
+    </style>
+
+    <style name="Divider.Horizontal" parent="Divider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+
+    </style>
+
+    <style name="Widget.App.Toolbar" parent="Widget.Material3.Toolbar">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.Toolbar</item>
+    </style>
+
+    <style name="ThemeOverlay.App.Toolbar" parent="">
+        <item name="colorSurface">@color/Eerie_Black</item>
+        <item name="colorOnSurface">@color/Eerie_Black</item>
+    </style>
+    <!--background movies-->
+    <style name="background_movies">
+        <item name="android:background">@color/Dark_Charcoal</item>
+        <item name="android:backgroundTint">@color/Dark_Charcoal</item>
+    </style>
+</resources>
+
